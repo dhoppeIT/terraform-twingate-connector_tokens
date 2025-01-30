@@ -10,8 +10,29 @@ Copy and paste the following code snippet to your Terraform configuration,
 specify the required variables and run the command `terraform init`.
 
 ```hcl
+module "twingate_remote_network" {
+  source  = "gitlab.com/terraform-child-modules-48151/terraform-twingate-remote_network/local"
+  version = "1.0.0"
+
+  name = "example-network"
+
+  location = "ON_PREMISE"
+}
+
+module "twingate_connector" {
+  source  = "gitlab.com/terraform-child-modules-48151/terraform-twingate-connector/local"
+  version = "1.0.0"
+
+  remote_network_id = module.twingate_remote_network.id
+
+  name = "example-connector"
+}
+
 module "twingate_connector_tokens" {
-  source = "git::ssh://git@gitlab.com:terraform-child-modules-48151/terraform-twingate-connector_tokens.git"
+  source  = "gitlab.com/terraform-child-modules-48151/terraform-twingate-connector-tokens/local"
+  version = "1.0.0"
+
+  connector_id = module.twingate_connector.id
 }
 ```
 
@@ -25,7 +46,9 @@ module "twingate_connector_tokens" {
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_twingate"></a> [twingate](#provider\_twingate) | ~> 3.0 |
 
 ## Modules
 
@@ -33,15 +56,23 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [twingate_connector_tokens.this](https://registry.terraform.io/providers/twingate/twingate/latest/docs/resources/connector_tokens) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_connector_id"></a> [connector\_id](#input\_connector\_id) | The ID of the parent Connector | `string` | n/a | yes |
+| <a name="input_keepers"></a> [keepers](#input\_keepers) | Arbitrary map of values that, when changed, will trigger recreation of resource | `map(string)` | `{}` | no |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_access_token"></a> [access\_token](#output\_access\_token) | The Access Token of the parent Connector |
+| <a name="output_refresh_token"></a> [refresh\_token](#output\_refresh\_token) | The ID of this resource |
 <!-- END_TF_DOCS -->
 
 ## Authors
