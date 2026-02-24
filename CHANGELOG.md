@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://gitlab.com/terraform-child-modules-48151/terraform-twingate-connector_tokens/compare/v1.0.0...v1.1.0) (2026-02-24)
+
+### Features
+
+* **terraform:** Upgrade to latest available version of Terraform provider ([b8743bb](https://gitlab.com/terraform-child-modules-48151/terraform-twingate-connector_tokens/commit/b8743bba39f5089bdcf44f5f238890f8a0b41ba1))
+
+### Bug Fixes
+
+* **terraform:** Add missing output id ([8977711](https://gitlab.com/terraform-child-modules-48151/terraform-twingate-connector_tokens/commit/8977711280d1618b726337d8ed70092ae4d450ca))
+
 ## 1.0.0 (2025-01-30)
 
 ### Features
