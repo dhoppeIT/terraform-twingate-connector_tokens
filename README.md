@@ -72,7 +72,8 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_access_token"></a> [access\_token](#output\_access\_token) | The Access Token of the parent Connector |
-| <a name="output_refresh_token"></a> [refresh\_token](#output\_refresh\_token) | The ID of this resource |
+| <a name="output_id"></a> [id](#output\_id) | The ID of this resource |
+| <a name="output_refresh_token"></a> [refresh\_token](#output\_refresh\_token) | The Refresh Token of the parent Connector |
 <!-- END_TF_DOCS -->
 
 ## Authors
