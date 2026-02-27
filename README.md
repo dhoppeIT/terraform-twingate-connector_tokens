@@ -13,7 +13,7 @@ specify the required variables and run the command `terraform init`.
 module "twingate_remote_network" {
   source  = "gitlab.com/terraform-child-modules-48151/terraform-twingate-remote-network/local"
   <!-- renovate: datasource=gitlab-tags depName=terraform-child-modules-48151/terraform-twingate-remote_network extractVersion=^v(?<version>.*)$ -->
-  version = "1.0.0"
+  version = "1.1.0"
 
   name = "example-network"
 
@@ -23,7 +23,7 @@ module "twingate_remote_network" {
 module "twingate_connector" {
   source  = "gitlab.com/terraform-child-modules-48151/terraform-twingate-connector/local"
   <!-- renovate: datasource=gitlab-tags depName=terraform-child-modules-48151/terraform-twingate-connector extractVersion=^v(?<version>.*)$ -->
-  version = "1.0.0"
+  version = "1.1.0"
 
   remote_network_id = module.twingate_remote_network.id
 
@@ -33,7 +33,7 @@ module "twingate_connector" {
 module "twingate_connector_tokens" {
   source  = "gitlab.com/terraform-child-modules-48151/terraform-twingate-connector-tokens/local"
   <!-- renovate: datasource=gitlab-tags depName=terraform-child-modules-48151/terraform-twingate-connector_tokens extractVersion=^v(?<version>.*)$ -->
-  version = "1.0.0"
+  version = "1.1.0"
 
   connector_id = module.twingate_connector.id
 }
