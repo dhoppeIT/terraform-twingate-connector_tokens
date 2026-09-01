@@ -43,15 +43,15 @@ module "twingate_connector_tokens" {
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_twingate"></a> [twingate](#requirement\_twingate) | ~> 4.0 |
+| <a name="requirement_twingate"></a> [twingate](#requirement\_twingate) | ~> 5.0 |
 
 ## Providers
 
 | Name | Version |
-|------|---------|
-| <a name="provider_twingate"></a> [twingate](#provider\_twingate) | ~> 4.0 |
+| ---- | ------- |
+| <a name="provider_twingate"></a> [twingate](#provider\_twingate) | ~> 5.0 |
 
 ## Modules
 
@@ -60,20 +60,20 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [twingate_connector_tokens.this](https://registry.terraform.io/providers/twingate/twingate/latest/docs/resources/connector_tokens) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_connector_id"></a> [connector\_id](#input\_connector\_id) | The ID of the parent Connector | `string` | n/a | yes |
 | <a name="input_keepers"></a> [keepers](#input\_keepers) | Arbitrary map of values that, when changed, will trigger recreation of resource | `map(string)` | `{}` | no |
 
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_access_token"></a> [access\_token](#output\_access\_token) | The Access Token of the parent Connector |
 | <a name="output_id"></a> [id](#output\_id) | The ID of this resource |
 | <a name="output_refresh_token"></a> [refresh\_token](#output\_refresh\_token) | The Refresh Token of the parent Connector |
