@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://gitlab.com/terraform-child-modules-48151/terraform-twingate-connector_tokens/compare/v1.1.0...v1.2.0) (2026-09-01)
+
+### Features
+
+* **terraform:** Upgrade to latest available version of Terraform provider ([8eaaf51](https://gitlab.com/terraform-child-modules-48151/terraform-twingate-connector_tokens/commit/8eaaf516724697d66b7f3cd560cf127f335c986b))
+
 ## [1.1.0](https://gitlab.com/terraform-child-modules-48151/terraform-twingate-connector_tokens/compare/v1.0.0...v1.1.0) (2026-02-24)
 
 ### Features
